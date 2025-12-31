@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BingeBites</title>
+  <link rel="stylesheet" href="styleproj.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">BingeBites</div>
+  <nav>
+    <a href="#streaming">Currently Streaming</a>
+    <a href="#menu">Café Menu</a>
+    <a href="#lounges">Screening Lounges</a>
+    <a href="#contact">About / Contact</a>
+  </nav>
+  <button class="btn-primary">Reserve Now</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-tag">A CAFÉ EXPERIENCE LIKE NO OTHER</p>
+  <h1>
+    <span>Sip. Stream.</span>
+    <span class="gold">Repeat.</span>
+  </h1>
+  <p class="hero-desc">
+    Indulge in artisan coffee and gourmet bites while enjoying private
+    screening lounges with the latest streaming movies.
+  </p>
+
+  <div class="hero-actions">
+    <button class="btn-gold">▶ View Movies</button>
+    <button class="btn-outline">📅 Reserve a Lounge</button>
+  </div>
+</section>
+
+<!-- CURRENTLY STREAMING -->
+<section id="streaming" class="section light">
+  <p class="section-tag">WHAT'S PLAYING</p>
+  <h2>Currently Streaming</h2>
+  <p class="section-desc">
+    Book a screening lounge and enjoy these amazing titles
+  </p>
+
+  <div class="card-grid">
+    <div class="movie-card"></div>
+    <div class="movie-card"></div>
+    <div class="movie-card"></div>
+    <div class="movie-card"></div>
+    <div class="movie-card"></div>
+    <div class="movie-card"></div>
+  </div>
+</section>
+
+<!-- SCREENING LOUNGES -->
+<section id="lounges" class="section dark">
+  <p class="section-tag">PRIVATE VIEWING</p>
+  <h2>Screening Lounges</h2>
+  <p class="section-desc">
+    Book your private cinema experience with premium amenities
+  </p>
+
+  <input type="date" class="date-picker"/>
+
+  <div class="lounge-grid">
+    <div class="lounge-card"></div>
+    <div class="lounge-card featured"></div>
+    <div class="lounge-card"></div>
+  </div>
+</section>
+
+<!-- CAFÉ MENU -->
+<section id="menu" class="section light">
+  <p class="section-tag">TASTE THE EXPERIENCE</p>
+  <h2>Café Menu</h2>
+  <p class="section-desc">
+    Designed to complement your viewing experience
+  </p>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="coffee">☕ Coffee & Beverages</button>
+    <button class="tab" data-tab="snacks">🍿 Snacks</button>
+    <button class="tab" data-tab="desserts">🍰 Desserts</button>
+    <button class="tab" data-tab="combos">🎬 Movie Combos</button>
+  </div>
+
+  <div class="menu-grid active" id="coffee">
+    <div class="menu-card"></div>
+    <div class="menu-card"></div>
+    <div class="menu-card"></div>
+    <div class="menu-card"></div>
+    <div class="menu-card"></div>
+    <div class="menu-card"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <div class="footer-logo">BingeBites</div>
+      <p>
+        Where cozy café vibes meet private cinema experiences.
+        Sip your favorite brew while streaming the latest movies.
+      </p>
+
+      <div class="footer-socials">
+        <span>◯</span>
+        <span>◯</span>
+        <span>◯</span>
+      </div>
+    </div>
+
+    <!-- Explore -->
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a>Currently Streaming</a>
+      <a>Screening Lounges</a>
+      <a>Café Menu</a>
+      <a>Gift Cards</a>
+      <a>Private Events</a>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>📍 123 Cinema Street<br>Downtown Arts District<br>New York, NY 10001</p>
+      <p>📞 (123) 456-7890</p>
+      <p>✉ hello@bingebites.com</p>
+    </div>
+
+    <!-- Hours -->
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <p><strong>Mon – Thu</strong><br>10:00 AM – 11:00 PM</p>
+      <p><strong>Fri – Sat</strong><br>10:00 AM – 1:00 AM</p>
+      <p><strong>Sunday</strong><br>11:00 AM – 10:00 PM</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2025 BingeBites. All rights reserved.</span>
+    <div>
+      <a>Privacy Policy</a>
+      <a>Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
