@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BingeBites | Café Menu</title>
+  <link rel="stylesheet" href="styleproj.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="logo.png">
+    <span>BingeBites</span>
+  </div>
+  <nav>
+    <a href="index2.html">Home</a>
+    <a href="streaming.html">Currently Streaming</a>
+    <a href="menu.html">Café Menu</a>
+    <a href="lounges.html">Screening Lounges</a>
+    
+  </nav>
+  <button class="btn-primary">Reserve Now</button>
+</header>
+
+<section id="menu" class="section light">
+  <p class="section-tag">TASTE THE EXPERIENCE</p>
+  <h2>Café Menu</h2>
+  <p class="section-desc">
+    Indulge in our carefully crafted menu, inspired by Indian flavors and café classics
+  </p>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="coffee">☕ Coffee & Beverages</button>
+    <button class="tab" data-tab="snacks">🍿 Snacks</button>
+    <button class="tab" data-tab="desserts">🍰 Desserts</button>
+    <button class="tab" data-tab="combos">🎬 Movie Combos</button>
+  </div>
+
+  <div class="menu-content">
+
+    <!-- ================= COFFEE & BEVERAGES ================= -->
+    <div class="menu-grid active" id="coffee">
+      <div class="menu-card"><div><h4>South Indian Filter Coffee</h4><p>Traditional decoction brewed slow, served frothy</p></div><span class="menu-price">₹120</span></div>
+      <div class="menu-card"><div><h4>Masala Chai</h4><p>Assam tea infused with ginger, cardamom & cloves</p></div><span class="menu-price">₹100</span></div>
+      <div class="menu-card"><div><h4>Cold Coffee with Ice Cream</h4><p>Classic café-style cold brew topped with vanilla</p></div><span class="menu-price">₹190</span></div>
+      <div class="menu-card"><div><h4>Chocolate Espresso</h4><p>Dark cocoa, bold espresso, whipped cream</p></div><span class="menu-price">₹180</span></div>
+      <div class="menu-card"><div><h4>Rose Milk</h4><p>Chilled milk with fragrant rose syrup</p></div><span class="menu-price">₹140</span></div>
+      <div class="menu-card"><div><h4>Caramel Cappuccino</h4><p>Rich espresso with steamed milk & caramel drizzle</p></div><span class="menu-price">₹200</span></div>
+      <div class="menu-card"><div><h4>Hazelnut Iced Latte</h4><p>Smooth cold milk blended with hazelnut espresso</p></div><span class="menu-price">₹210</span></div>
+      <div class="menu-card"><div><h4>Fresh Lime Mint Cooler</h4><p>Zesty lime with mint & soda, perfectly refreshing</p></div><span class="menu-price">₹160</span></div>
+    </div>
+
+    <!-- ================= SNACKS ================= -->
+    <div class="menu-grid" id="snacks">
+      <div class="menu-card"><div><h4>Cheese Popcorn</h4><p>Movie-style popcorn with cheesy seasoning</p></div><span class="menu-price">₹150</span></div>
+      <div class="menu-card"><div><h4>Peri Peri Fries</h4><p>Crispy fries tossed in peri-peri spice</p></div><span class="menu-price">₹220</span></div>
+      <div class="menu-card"><div><h4>Nachos with Salsa & Cheese Dip</h4><p>Classic corn chips with house-made dips</p></div><span class="menu-price">₹240</span></div>
+      <div class="menu-card"><div><h4>Paneer Tikka Bites</h4><p>Smoky, spiced paneer grilled to perfection</p></div><span class="menu-price">₹280</span></div>
+      <div class="menu-card"><div><h4>Loaded Samosa Chaat</h4><p>Crushed samosa, curd, chutneys & sev</p></div><span class="menu-price">₹200</span></div>
+      <div class="menu-card"><div><h4>Garlic Bread with Cheese</h4><p>Toasted bread topped with garlic butter & melted cheese</p></div><span class="menu-price">₹230</span></div>
+      <div class="menu-card"><div><h4>Chicken Popcorn</h4><p>Crispy bite-sized chicken seasoned to perfection</p></div><span class="menu-price">₹320</span></div>
+      <div class="menu-card"><div><h4>Veg Loaded Sandwich</h4><p>Grilled sandwich stuffed with veggies & cheese</p></div><span class="menu-price">₹260</span></div>
+    </div>
+
+    <!-- ================= DESSERTS ================= -->
+    <div class="menu-grid" id="desserts">
+      <div class="menu-card"><div><h4>Classic Tiramisu</h4><p>Coffee-soaked layers with mascarpone</p></div><span class="menu-price">₹350</span></div>
+      <div class="menu-card"><div><h4>Chocolate Lava Cake</h4><p>Warm cake with molten chocolate center</p></div><span class="menu-price">₹400</span></div>
+      <div class="menu-card"><div><h4>Gulab Jamun Cheesecake</h4><p>Fusion dessert with desi sweetness</p></div><span class="menu-price">₹320</span></div>
+      <div class="menu-card"><div><h4>Matka Kulfi</h4><p>Traditional slow-frozen kulfi in earthen pot</p></div><span class="menu-price">₹180</span></div>
+      <div class="menu-card"><div><h4>Brownie with Hot Chocolate Sauce</h4><p>Fudgy brownie served warm</p></div><span class="menu-price">₹260</span></div>
+      <div class="menu-card"><div><h4>Red Velvet Pastry</h4><p>Soft red velvet layers with cream cheese frosting</p></div><span class="menu-price">₹280</span></div>
+      <div class="menu-card"><div><h4>Churros with Chocolate Dip</h4><p>Crispy cinnamon churros served with warm chocolate sauce</p></div><span class="menu-price">₹300</span></div>
+      <div class="menu-card"><div><h4>Classic Vanilla Panna Cotta</h4><p>Silky Italian dessert topped with berry compote</p></div><span class="menu-price">₹290</span></div>
+    </div>
+
+    <!-- ================= COMBOS ================= -->
+    <div class="menu-grid" id="combos">
+      <div class="menu-card"><div><h4>Friends Feast</h4><p>4 beverages, loaded fries, nachos & dessert</p></div><span class="menu-price">₹599</span></div>
+      <div class="menu-card"><div><h4>Couple’s Cozy Combo</h4><p>2 coffees, popcorn & chocolate lava cake</p></div><span class="menu-price">₹399</span></div>
+      <div class="menu-card"><div><h4>Movie Marathon Box</h4><p>Unlimited popcorn, 4 drinks & snack platter</p></div><span class="menu-price">₹799</span></div>
+      <div class="menu-card"><div><h4>Sweet Escape</h4><p>2 desserts & 2 signature beverages</p></div><span class="menu-price">₹449</span></div>
+    </div>
+
+  </div>
+</section>
+

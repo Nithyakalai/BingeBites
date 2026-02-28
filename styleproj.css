@@ -7,7 +7,6 @@
   --brown: #3a2416;
 }
 
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -15,12 +14,11 @@
 }
 
 body {
-  font-family: 'Inter', serif;
+  font-family: 'Inter';
   background: var(--cream);
   color: var(--brown);
 }
 
-/* ================= NAVBAR ================= */
 .navbar {
   display: flex;
   align-items: center;
@@ -51,7 +49,7 @@ body {
 
 .logo {
   display: flex;
-  align-items: center;   /* 🔥 THIS is the key line */
+  align-items: center;   
   gap: 12px;
 }
 
@@ -66,12 +64,11 @@ body {
 .logo span {
   font-size: 22px;
   font-weight: 550;
-  line-height: 1;        /* prevents text from sitting lower */
-  color: #3a2416;        /* match your theme */
+  line-height: 1;        
+  color: #3a2416;        
   font-family:serif;
 }
 
-/* ================= HERO ================= */
 .hero {
   background: radial-gradient(circle at center, #4a2f1c, var(--dark));
   color: white;
@@ -101,7 +98,7 @@ body {
 .hero::after { right: 20px; }
 
 .hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display';
   font-size: 72px;
   margin: 20px 0;
 }
@@ -129,9 +126,9 @@ body {
 }
 
 .hero-actions a {
-  text-decoration: none;   /* remove underline */
-  color: inherit;          /* keep button text color */
-  display: inline-block;   /* clickable area stays correct */
+  text-decoration: none;   
+  color: inherit;          
+  display: inline-block;   
 }
 
 .btn-gold {
@@ -151,8 +148,6 @@ body {
   border-radius: 40px;
   cursor: pointer;
 }
-
-/* ================= SECTIONS ================= */
 .section {
   padding: 100px 60px;
   text-align: center;
@@ -190,7 +185,6 @@ body {
   font-family: serif;
 }
 
-/* ================= MOVIE CARDS ================= */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -269,11 +263,10 @@ body {
   box-shadow: 0 20px 40px rgba(0,0,0,0.35);
 }
 
-/*Date picker*/
 .date-picker {
   background: none;
   color: white;
-  border: 0.7px solid var(--gold);   /* yellow oval */
+  border: 0.7px solid var(--gold);  
   border-radius: 999px;           
   padding: 10px 22px;
   font-family: inherit;
@@ -282,32 +275,28 @@ body {
   height: 35px;
 }
 
-/* calendar icon color (Chrome / Edge) */
 .date-picker::-webkit-calendar-picker-indicator {
   filter: invert(80%) sepia(60%) saturate(400%) hue-rotate(10deg);
   cursor: pointer;
 }
 
-/* Lounge Images */
 .lounge-img {
   height: 180px;
   width: 100%;
-  background-size: contain;   /* SHOW FULL IMAGE */
+  background-size: contain;   
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #000;     /* fallback / letterbox */
+  background-color: #000;     
   border-radius: 18px 18px 0 0;
 }
 
-/* Image overlays */
+
 .lounge-img::after {
   content: "";
   position: absolute;
-  inset: 0;
   background: rgba(0,0,0,0.25);
 }
 
-/* Individual images */
 .lounge-img.cozy {
   background-image: url("https://scenebooking.com/wp-content/uploads/2025/05/Copy-of-Green-and-Beige-Illustrative-Creative-Festival-Poster-828-x-648-px-7.png");
 }
@@ -320,7 +309,6 @@ body {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlUZQwsACH8NW6GAX_QJxIHAaedO6GaRmnQA&s");
 }
 
-/* Lounge content */
 .lounge-body {
   padding: 22px;
   text-align: left;
@@ -335,16 +323,12 @@ body {
 .price {
   color: var(--gold);
   font-weight: 600;
-  display: block;
-  margin-bottom: 8px;
 }
 
 .lounge-body p {
   font-size: 14px;
-  opacity: 0.9;
 }
 
-/* Feature chips */
 .chips {
   display: flex;
   flex-wrap: wrap;
@@ -359,14 +343,12 @@ body {
   font-size: 12px;
 }
 
-/* Responsive */
 @media (max-width: 600px) {
   .lounge-img {
     height: 160px;
   }
 }
 
-/* =================MENU TABS ================= */
 .tabs {
   display: flex;
   justify-content: center;
@@ -397,16 +379,15 @@ body {
   box-shadow: 0 6px 14px rgba(0,0,0,0.18);
 }
 
-/* ================= MENU ================= */
 .menu-grid {
-  display: none; /* hide by default */
+  display: none; 
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
   margin-top: 50px;
 }
 
 .menu-grid.active {
-  display: grid; /* show only active tab */
+  display: grid; 
 }
 
 .menu-card {
@@ -424,7 +405,7 @@ body {
   font-weight: 600;
 }
 
-/* ================= FOOTER (NEW STRUCTURE) ================= */
+
 
 .footer {
   background: radial-gradient(circle at top, #3a2416, #1e120a);
@@ -439,7 +420,6 @@ body {
   padding: 0 70px;
 }
 
-/* Grid layout */
 .footer-container {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
@@ -447,7 +427,6 @@ body {
   align-items: start;
 }
 
-/* Brand column */
 .footer-logo {
   width: 100px;
   margin-bottom: 20px;
@@ -463,7 +442,6 @@ body {
   font-weight: 570;
 }
 
-/* Social icons */
 .social-links {
   display: flex;
   gap: 15px;
@@ -483,7 +461,7 @@ body {
   opacity: 0.8;
 }
 
-/* Column headings */
+
 .footer-column h4 {
   font-family: 'Playfair Display', serif;
   font-size: 18px;
@@ -491,7 +469,6 @@ body {
   margin-bottom: 22px;
 }
 
-/* Links list */
 .footer-links,
 .footer-contact,
 .footer-hours {
@@ -518,7 +495,7 @@ body {
   object-fit: contain;
 }
 
-/* Footer links */
+
 .footer-links a {
   text-decoration: none;
   color: #c9bfb6;
@@ -531,7 +508,7 @@ body {
   color: var(--gold);
 }
 
-/* Hours column layout */
+
 .footer-hours li div {
   display: flex;
   flex-direction: column;
@@ -549,8 +526,6 @@ body {
   color: #bdb2a8;
   font-family: serif;
 }
-
-/* ================= FOOTER BOTTOM ================= */
 
 .footer-bottom {
   margin-top: 70px;
@@ -578,8 +553,6 @@ body {
   color: var(--gold);
 }
 
-/* ================= RESPONSIVE ================= */
-
 @media (max-width: 1100px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
@@ -606,4 +579,13 @@ body {
     margin-left: 15px;
     margin-right: 15px;
   }
+}
+.navbar.scrolled {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  background: #111;
+}
+
+.nav-link.active {
+  color: #d4af37;
+  font-weight: 600;
 }
