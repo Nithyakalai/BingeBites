@@ -1,4 +1,3 @@
-
 /* =========================
    Sticky Navbar on Scroll
 ========================= */
@@ -64,7 +63,42 @@ reserveButtons.forEach(button => {
 });
 
 /* =========================
-   Active Nav Link Highlight
+   FOOD SELECTION & BOOKING
+========================= */
+const checkboxes = document.querySelectorAll(".item-check");
+const totalPriceEl = document.getElementById("total-price");
+const bookFoodBtn = document.getElementById("bookFoodBtn");
+
+let total = 0;
+
+checkboxes.forEach(check => {
+  check.addEventListener("change", () => {
+    const price = Number(check.dataset.price);
+    total += check.checked ? price : -price;
+    totalPriceEl.textContent = `₹${total}`;
+  });
+});
+
+bookFoodBtn.addEventListener("click", () => {
+  if (total === 0) {
+    alert("🍽️ Your order is empty!\nSelect some delicious items to continue.");
+    return;
+  }
+
+  alert(
+    `🍿✨ Food Booking Confirmed!\n\n` +
+    `Your snacks are being freshly prepared ☕🍰\n` +
+    `Total Amount: ₹${total}\n\n` +
+    `Sit back, relax & enjoy the show 🎬`
+  );
+
+  checkboxes.forEach(c => c.checked = false);
+  total = 0;
+  totalPriceEl.textContent = "₹0";
+});
+
+/* =========================
+   Active Nav Highlight
 ========================= */
 const sections = document.querySelectorAll('section, footer');
 const navLinks = document.querySelectorAll('.nav-link');
