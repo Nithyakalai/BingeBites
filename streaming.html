@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>BingeBites | Currently Streaming</title>
   <link rel="stylesheet" href="styleproj.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -14,10 +15,10 @@
     <span>BingeBites</span>
   </div>
   <nav>
-    <a href="index2.html">Home</a>
-    <a href="streaming.html">Currently Streaming</a>
-    <a href="menu.html">Café Menu</a>
-    <a href="lounges.html">Screening Lounges</a>
+    <a href="index2.html"><b>Home</b></a>
+    <a href="streaming.html"><b>Currently Streaming</b></a>
+    <a href="lounges.html"><b>Screening Lounges</b></a>
+    <a href="menu.html"><b>Café Menu</b></a>
     
   </nav>
   <button class="btn-primary">Reserve Now</button>
@@ -34,12 +35,13 @@
 
     <div class="movie-card">
       <div class="poster">
-        <img src="https://upload.wikimedia.org/wikipedia/en/7/75/Leo_%282023_Indian_film%29.jpg" alt="Leo">
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/b8a0537413009fe68f2cd20f2b7fbbc9caabc35d41c3f56ecbd8b233ec66f7ca.jpg" alt="Sitaramam">
         <span class="badge">Now Streaming</span>
       </div>
       <div class="movie-info">
-        <h4>Leo</h4>
-        <p>Action / Thriller • 2h 48m</p>
+        <input type="radio" name="movie" data-movie="Sitaramam">
+        <h4>Sitaramam</h4>
+        <p>Romance / Action • 2h 43m</p>
       </div>
     </div>
 
@@ -49,6 +51,7 @@
         <span class="badge">Now Streaming</span>
       </div>
       <div class="movie-info">
+        <input type="radio" name="movie" data-movie="Zootopia 2">
         <h4>Zootopia 2</h4>
         <p>Family / Comedy • 1h 50m</p>
       </div>
@@ -60,6 +63,7 @@
         <span class="badge">Now Streaming</span>
       </div>
       <div class="movie-info">
+        <input type="radio" name="movie" data-movie="Lokah">
         <h4>Lokah</h4>
         <p>Action / Fantasy • 2h 30m</p>
       </div>
@@ -67,10 +71,11 @@
 
     <div class="movie-card">
       <div class="poster">
-        <img src="https://riyabhorkar.com/wp-content/uploads/2024/12/ecfc79086b8032844b087b6caedf36d6.jpg" alt="YJHD">
+        <img src="https://m.media-amazon.com/images/M/MV5BYjRhZjlmZjYtOGY2MS00YjExLWI2NjYtM2EyZGRhMWJkNzFlXkEyXkFqcGc@._V1_.jpg" alt="YJHD">
         <span class="badge">Now Streaming</span>
       </div>
       <div class="movie-info">
+        <input type="radio" name="movie" data-movie="Yeh Jawaani Hai Deewani">
         <h4>Yeh Jawaani Hai Deewani</h4>
         <p>Romance / Comedy • 2h 40m</p>
       </div>
@@ -78,10 +83,11 @@
 
     <div class="movie-card">
       <div class="poster">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cb/Jailer_2023_Tamil_film_poster.jpg/250px-Jailer_2023_Tamil_film_poster.jpg" alt="Jailer">
+        <img src="https://moviefuels.com/wp-content/uploads/2023/10/MV5BOTNhMTllMWQtYjJmYy00MWVhLTkzZGQtZWZkNjEzNTQ1YmI2XkEyXkFqcGdeQXVyMTU0ODI1NTA2._V1_-656x1024.jpg" alt="Jailer">
         <span class="badge">Now Streaming</span>
       </div>
       <div class="movie-info">
+        <input type="radio" name="movie" data-movie="Jailer">
         <h4>Jailer</h4>
         <p>Action / Comedy • 2h 48m</p>
       </div>
@@ -93,11 +99,20 @@
         <span class="badge">Now Streaming</span>
       </div>
       <div class="movie-info">
+        <input type="radio" name="movie" data-movie="Spider-Man: No Way Home">
         <h4>Spider-Man: No Way Home</h4>
         <p>Action / Sci-Fi • 2h 28m</p>
       </div>
     </div>
 
   </div>
+
+  <!-- ================= BOOKING SUMMARY ================= -->
+  <div class="booking-summary">
+    <button class="btn-primary" id="bookMovieBtn">Book Movie</button>
+  </div>
+
 </section>
+</body>
+</html>
 

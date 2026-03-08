@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>BingeBites | Screening Lounges</title>
   <link rel="stylesheet" href="styleproj.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -13,10 +14,10 @@
     <span>BingeBites</span>
   </div>
   <nav>
-    <a href="index2.html">Home</a>
-    <a href="streaming.html">Currently Streaming</a>
-    <a href="menu.html">Café Menu</a>
-    <a href="lounges.html">Screening Lounges</a>
+    <a href="index2.html"><b>Home</b></a>
+    <a href="streaming.html"><b>Currently Streaming</b></a>
+    <a href="lounges.html"><b>Screening Lounges</b></a>
+    <a href="menu.html"><b>Café Menu</b></a>
     
   </nav>
   <button class="btn-primary">Reserve Now</button>
@@ -29,11 +30,14 @@
     Book your private cinema experience with premium amenities and full café service
   </p>
 
-  <input type="date" class="date-picker"/>
+  <div class="picker-group">
+    <input type="date" class="date-picker"/>
+    <input type="time" class="time-picker" min="10:00" max="23:00">
+  </div>
 
   <div class="lounge-grid">
 
-    <div class="lounge-card">
+    <div class="lounge-card" data-price="500">
       <div class="lounge-img cozy"></div>
       <div class="lounge-body">
         <h4>Cozy Corner</h4>
@@ -48,7 +52,7 @@
       </div>
     </div>
 
-    <div class="lounge-card featured">
+    <div class="lounge-card featured" data-price="1000">
       <div class="lounge-img friends"></div>
       <div class="lounge-body">
         <h4>Friends Lounge</h4>
@@ -63,7 +67,7 @@
       </div>
     </div>
 
-    <div class="lounge-card">
+    <div class="lounge-card" data-price="1500">
       <div class="lounge-img party"></div>
       <div class="lounge-body">
         <h4>Party Suite</h4>
