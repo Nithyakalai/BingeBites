@@ -1,6 +1,6 @@
-/* =========================
-   Sticky Navbar on Scroll
-========================= */
+
+   //Sticky Navbar on Scroll
+
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
@@ -11,20 +11,8 @@ window.addEventListener('scroll', () => {
   }
 });
 
-/* =========================
-   Smooth Scroll
-========================= */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href'))
-      .scrollIntoView({ behavior: 'smooth' });
-  });
-});
+   //Logo and Reserve Button Navigation
 
-/* =========================
-   Logo and Reserve Button Navigation
-========================= */
 const logo = document.querySelector('.logo');
 const reserveBtn = document.querySelector('.navbar .btn-primary');
 
@@ -40,9 +28,9 @@ if (reserveBtn) {
   });
 }
 
-/* =========================
-   Menu Tabs
-========================= */
+
+   //Menu Tabs
+
 document.querySelectorAll(".tab").forEach(tab => {
   tab.addEventListener("click", () => {
     document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
@@ -53,14 +41,13 @@ document.querySelectorAll(".tab").forEach(tab => {
   });
 });
 
-/* =========================
-   Lounge Reservation Logic
-========================= */
+
+   //Lounge Reservation Logic
+
 const reserveButtons = document.querySelectorAll('.lounge-card .btn-gold');
 const datePicker = document.querySelector('.date-picker');
 const timePicker = document.querySelector('.time-picker');
 
-// Set minimum date to today
 if (datePicker) {
   const today = new Date();
   const minDate = today.toISOString().split('T')[0];
@@ -104,9 +91,9 @@ reserveButtons.forEach(button => {
     timePicker.value = '';  });
 });
 
-/* =========================
-   FOOD SELECTION & BOOKING
-========================= */
+
+   //FOOD SELECTION & BOOKING
+
 const checkboxes = document.querySelectorAll(".item-check");
 const totalPriceEl = document.getElementById("total-price");
 const bookFoodBtn = document.getElementById("bookFoodBtn");
@@ -141,9 +128,9 @@ if (bookFoodBtn) {
   });
 }
 
-/* =========================
-   MOVIE SELECTION & BOOKING
-========================= */
+
+   //MOVIE SELECTION & BOOKING
+
 document.addEventListener("DOMContentLoaded", () => {
   const bookMovieBtn = document.getElementById("bookMovieBtn");
   
@@ -167,9 +154,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-/* =========================
-   Active Nav Highlight
-========================= */
+
+  // Active Nav Highlight
+
 const sections = document.querySelectorAll('section, footer');
 const navLinks = document.querySelectorAll('nav a');
 

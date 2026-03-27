@@ -31,9 +31,14 @@
     Book a screening lounge and enjoy these amazing titles with your friends and family
   </p>
 
+  <div id="react-filter"></div>
+  <p id="no-movies-msg" style="display:none; font-size:18px; margin-top:20px;">
+    ❌ No movies available in this category
+  </p>
+
   <div class="card-grid">
 
-    <div class="movie-card">
+    <div class="movie-card" data-genre="Romance Action">
       <div class="poster">
         <img src="https://m.media-amazon.com/images/S/pv-target-images/b8a0537413009fe68f2cd20f2b7fbbc9caabc35d41c3f56ecbd8b233ec66f7ca.jpg" alt="Sitaramam">
         <span class="badge">Now Streaming</span>
@@ -45,7 +50,7 @@
       </div>
     </div>
 
-    <div class="movie-card">
+    <div class="movie-card" data-genre="Comedy">
       <div class="poster">
         <img src="https://m.media-amazon.com/images/M/MV5BYjg1Mjc3MjQtMTZjNy00YWVlLWFhMWEtMWI3ZTgxYjJmNmRlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Zootopia 2">
         <span class="badge">Now Streaming</span>
@@ -57,7 +62,7 @@
       </div>
     </div>
 
-    <div class="movie-card">
+    <div class="movie-card" data-genre="Action Fantasy">
       <div class="poster">
         <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/111e14227838741.684823836fa85.jpg" alt="Lokah">
         <span class="badge">Now Streaming</span>
@@ -69,7 +74,7 @@
       </div>
     </div>
 
-    <div class="movie-card">
+    <div class="movie-card" data-genre="Romance Comedy">
       <div class="poster">
         <img src="https://m.media-amazon.com/images/M/MV5BYjRhZjlmZjYtOGY2MS00YjExLWI2NjYtM2EyZGRhMWJkNzFlXkEyXkFqcGc@._V1_.jpg" alt="YJHD">
         <span class="badge">Now Streaming</span>
@@ -81,7 +86,7 @@
       </div>
     </div>
 
-    <div class="movie-card">
+    <div class="movie-card" data-genre="Action Comedy">
       <div class="poster">
         <img src="https://moviefuels.com/wp-content/uploads/2023/10/MV5BOTNhMTllMWQtYjJmYy00MWVhLTkzZGQtZWZkNjEzNTQ1YmI2XkEyXkFqcGdeQXVyMTU0ODI1NTA2._V1_-656x1024.jpg" alt="Jailer">
         <span class="badge">Now Streaming</span>
@@ -93,7 +98,7 @@
       </div>
     </div>
 
-    <div class="movie-card">
+    <div class="movie-card" data-genre="Action Sci-Fi">
       <div class="poster">
         <img src="https://wallpapercave.com/wp/wp10252923.jpg" alt="Spider-Man">
         <span class="badge">Now Streaming</span>
@@ -113,6 +118,18 @@
   </div>
 
 </section>
+
+<div id="react-root"></div>
+
+<!-- React CDN -->
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<!-- Babel (to write JSX) -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<!-- Your React code -->
+<script type="text/babel" src="react-feature.js"></script>
+
 </body>
 </html>
-
