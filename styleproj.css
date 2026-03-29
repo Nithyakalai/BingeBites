@@ -404,7 +404,7 @@ body {
   box-shadow: 0 6px 14px rgba(0,0,0,0.18);
 }
 
-/* ================= MENU GRID (VERTICAL LIST) ================= */
+/* MENU GRID  */
 
 .menu-grid {
   display: none;
@@ -417,7 +417,7 @@ body {
   display: flex;
 }
 
-/* ================= MENU CARD ================= */
+/*  MENU CARD  */
 
 .menu-card {
   position: relative;
@@ -431,7 +431,7 @@ body {
   text-align: left;
 }
 
-/* ================= MENU INFO ================= */
+/*  MENU INFO  */
 
 .menu-info {
   display: flex;
@@ -448,7 +448,7 @@ body {
   color: #777;
 }
 
-/* ================= PRICE ================= */
+/*  PRICE  */
 
 .menu-price {
   font-weight: 600;
@@ -456,7 +456,7 @@ body {
   white-space: nowrap;
 }
 
-/* ================= CHECKBOX POSITION ================= */
+/*  CHECKBOX POSITION  */
 
 .menu-info input[type="checkbox"] {
   position: absolute;
@@ -466,7 +466,7 @@ body {
   cursor: pointer;
 }
 
-/* ================= RADIO BUTTON POSITION ================= */
+/*  RADIO BUTTON POSITION  */
 
 .movie-info input[type="radio"] {
   position: absolute;
@@ -476,7 +476,7 @@ body {
   cursor: pointer;
 }
 
-/* ================= MENU SECTION POSITIONING ================= */
+/*  MENU SECTION POSITIONING  */
 
 #menu {
   position: relative;
@@ -486,7 +486,7 @@ body {
   padding-bottom: 220px; /* space for order summary */
 }
 
-/* ================= ORDER SUMMARY (BOTTOM RIGHT, NOT FLOATING) ================= */
+/*  ORDER SUMMARY */
 
 .order-summary {
   position: absolute;
@@ -515,7 +515,7 @@ body {
   border-radius: 30px;
 }
 
-/* ================= MOBILE SAFETY ================= */
+/*  MOBILE SAFETY  */
 
 @media (max-width: 600px) {
   .menu-card {
@@ -735,5 +735,5 @@ body {
 
   
 }
-/* ================= FLOATING ORDER SUMMARY ================= */
+
 
