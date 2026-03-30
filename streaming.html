@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>BingeBites | Currently Streaming</title>
   <link rel="stylesheet" href="styleproj.css">
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel" src="react-feature.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -21,7 +25,7 @@
     <a href="menu.html"><b>Café Menu</b></a>
     
   </nav>
-  <button class="btn-primary">Reserve Now</button>
+  <div class="cart-root"></div>
 </header>
 
 <section id="streaming" class="section light">
@@ -118,18 +122,6 @@
   </div>
 
 </section>
-
-<div id="react-root"></div>
-
-<!-- React CDN -->
-<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
-<!-- Babel (to write JSX) -->
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-<!-- Your React code -->
-<script type="text/babel" src="react-feature.js"></script>
 
 </body>
 </html>

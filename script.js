@@ -11,20 +11,13 @@ window.addEventListener('scroll', () => {
   }
 });
 
-   //Logo and Reserve Button Navigation
+   //Logo Navigation
 
 const logo = document.querySelector('.logo');
-const reserveBtn = document.querySelector('.navbar .btn-primary');
 
 if (logo) {
   logo.addEventListener('click', () => {
     window.location.href = 'index2.html';
-  });
-}
-
-if (reserveBtn) {
-  reserveBtn.addEventListener('click', () => {
-    window.location.href = 'lounges.html';
   });
 }
 
@@ -54,7 +47,6 @@ if (datePicker) {
   datePicker.min = minDate;
 }
 
-
 reserveButtons.forEach(button => {
   button.addEventListener('click', () => {
     const loungeCard = button.closest('.lounge-card');
@@ -79,16 +71,20 @@ reserveButtons.forEach(button => {
       return;
     }
 
-    alert(
-      `🎬 Reservation Confirmed!\n\n` +
-      `Lounge: ${loungeName}\n` +
-      `Date: ${selectedDate}\n` +
-      `Time: ${selectedTime}\n` +
-      `Cost: ₹${price}/hour\n\n` +
-      `We can’t wait to host you at BingeBites ☕🍿`
-    );
+    const cart = JSON.parse(localStorage.getItem("bb_cart") || "[]");
+    cart.push({
+      type: "🛋️ Lounge",
+      name: loungeName,
+      detail: `${selectedDate} at ${selectedTime}`,
+      price: Number(price)
+    });
+    localStorage.setItem("bb_cart", JSON.stringify(cart));
+    window.dispatchEvent(new Event("bb_cart_update"));
+
+    alert(`✅ Lounge added to cart!\n\nLounge: ${loungeName}\nDate: ${selectedDate}\nTime: ${selectedTime}\nCost: ₹${price}/hour`);
     datePicker.value = '';
-    timePicker.value = '';  });
+    timePicker.value = '';
+  });
 });
 
 
@@ -115,13 +111,17 @@ if (bookFoodBtn) {
       return;
     }
 
-    alert(
-      `🍿✨ Food Order Confirmed!\n\n` +
-      `Your snacks are being freshly prepared ☕🍰\n` +
-      `Total Amount: ₹${total}\n\n` +
-      `Sit back, relax & enjoy the show 🎬`
-    );
+    const cart = JSON.parse(localStorage.getItem("bb_cart") || "[]");
+    checkboxes.forEach(c => {
+      if (c.checked) {
+        const name = c.closest(".menu-info").querySelector("h4").innerText;
+        cart.push({ type: "🍽️ Food", name, price: Number(c.dataset.price) });
+      }
+    });
+    localStorage.setItem("bb_cart", JSON.stringify(cart));
+    window.dispatchEvent(new Event("bb_cart_update"));
 
+    alert(`🍿 Food added to cart!\nTotal: ₹${total}`);
     checkboxes.forEach(c => c.checked = false);
     total = 0;
     totalPriceEl.textContent = "₹0";
@@ -133,47 +133,23 @@ if (bookFoodBtn) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const bookMovieBtn = document.getElementById("bookMovieBtn");
-  
+
   if (bookMovieBtn) {
     bookMovieBtn.addEventListener("click", () => {
       const selectedMovie = document.querySelector('input[name="movie"]:checked');
-      
+
       if (!selectedMovie) {
         alert("🎥 Please select a movie to book.");
         return;
       }
 
-      alert(
-        `🎬 Movie Booking Confirmed!\n\n` +
-        `Movie: ${selectedMovie.dataset.movie}\n\n` +
-        `Get ready for an amazing screening at BingeBites! 🍿☕`
-      );
+      const cart = JSON.parse(localStorage.getItem("bb_cart") || "[]");
+      cart.push({ type: "🎬 Movie", name: selectedMovie.dataset.movie, price: 0 });
+      localStorage.setItem("bb_cart", JSON.stringify(cart));
+      window.dispatchEvent(new Event("bb_cart_update"));
 
+      alert(`🎬 Movie added to cart!\n\nMovie: ${selectedMovie.dataset.movie}`);
       selectedMovie.checked = false;
     });
   }
-});
-
-
-  // Active Nav Highlight
-
-const sections = document.querySelectorAll('section, footer');
-const navLinks = document.querySelectorAll('nav a');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    if (window.scrollY >= sectionTop) {
-      current = section.getAttribute('id');
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
-    }
-  });
 });

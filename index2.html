@@ -4,8 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BingeBites | Sip. Stream. Repeat.</title>
-
   <link rel="stylesheet" href="styleproj.css">
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel" src="react-feature.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -16,32 +19,26 @@
     <img src="logo.png" alt="BingeBites Logo">
     <span>BingeBites</span>
   </div>
-
   <nav>
     <a href="index2.html"><b>Home</b></a>
     <a href="streaming.html"><b>Currently Streaming</b></a>
     <a href="lounges.html"><b>Screening Lounges</b></a>
     <a href="menu.html"><b>Café Menu</b></a>
   </nav>
-
-  <button class="btn-primary">Reserve Now</button>
+  <div class="cart-root"></div>
 </header>
-
 <!-- ================= HERO SECTION ================= -->
 <section class="hero" id="home">
   <p class="hero-tag">A CAFÉ EXPERIENCE LIKE NO OTHER</p>
-
   <h1>
     <span>Sip. Stream.</span>
     <span class="gold">Repeat.</span>
   </h1>
-
   <p class="hero-desc">
     Indulge in artisan coffee and gourmet bites while enjoying
     private screening lounges with the latest movies.
     Your cozy cinema escape awaits.
   </p>
-
   <div class="hero-actions">
     <button class="btn-gold">
       <a href="streaming.html">▶ View Movies</a>
